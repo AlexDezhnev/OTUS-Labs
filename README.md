@@ -22,7 +22,7 @@ vagrant up поднимает машину и:
 ### Проверка
 > vagrant up
 
-> vagrant ssh rpn
+> vagrant ssh rpm
 
 > yum repolist | grep custom
 ```
