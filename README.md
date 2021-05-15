@@ -21,7 +21,9 @@ vagrant up поднимает машину и:
 
 ### Проверка
 > vagrant up
+
 > vagrant ssh rpn
+
 > yum repolist | grep custom
 ```
 custom                              custom-repo 
