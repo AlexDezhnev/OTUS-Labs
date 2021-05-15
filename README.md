@@ -44,3 +44,6 @@ Repo        : custom
 1:nginx-1.14.1-1.el7_4.ngx.x86_64 : High performance web server
 Repo        : @/nginx-1.14.1-1.el7_4.ngx.x86_64
 ```
+> exit
+
+> vagrant destroy -f
