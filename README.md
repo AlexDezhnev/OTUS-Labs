@@ -17,9 +17,9 @@
 
 ### 1. Сервис logmonitor
 
-Скрипт install.sh копирует в систему сервис logmonitor и его настройки, хранящиеся в файле /etc/sysconfig/logmonitor, создает симлинк и запускает сервис
+Скрипт install.sh копирует в систему сервис logmonitor и его настройки, хранящиеся в файле ***/etc/sysconfig/logmonitor***, создает симлинк и запускает сервис
 
-Каждые 30 секунд сервис запускает скрипт /usr/bin/logmonitor.sh, который проверяет наличие ключевого слова в заданном в настройках файле (по умолчанию файл /vagrant/Vagrantfile, ключевое слово config) и делает запись в журнале
+Каждые 30 секунд сервис запускает скрипт ***/usr/bin/logmonitor.sh***, который проверяет наличие ключевого слова в заданном в настройках файле (по умолчанию файл ***/vagrant/Vagrantfile***, ключевое слово ***config***) и делает запись в журнале
 
 ### Проверка:
 > systemctl status logmonitor.service
@@ -56,7 +56,7 @@ May 28 09:21:00 localhost.localdomain logmonitor.sh[12885]: config.vm.provision 
 ### 2. Переписать spawn-fcgi на unit-файл 
 
 Тут все довольно просто, главное загрузить нужные зависимости :)
-Скрипт install.sh копирует в систему /etc/systemd/system/spawn-fcgi.service, правит конфиг /etc/sysconfig/spawn-fcgi и запускает сам сервис.
+Скрипт ***install.sh*** копирует в систему ***/etc/systemd/system/spawn-fcgi.service***, правит конфиг ***/etc/sysconfig/spawn-fcgi*** и запускает сам сервис.
 
 ### Проверка:
 
@@ -70,8 +70,8 @@ May 28 09:21:00 localhost.localdomain logmonitor.sh[12885]: config.vm.provision 
 ```
 ### 3. Запуск нескольких экземпляров httpd
 
-Скрипт install.sh копирует в систему unit-файл /etc/systemd/system/httpd@.service
-Он, в свою очередь, при запуске использует конфиг /etc/sysconfig/httpd{1,2} для запуска экземпляра Apache с другим портом (8000 и 8001) и PID 
+Скрипт install.sh копирует в систему unit-файл ***/etc/systemd/system/httpd@.service***
+Он, в свою очередь, при запуске использует конфиг ***/etc/sysconfig/httpd{1,2}*** для запуска экземпляра Apache с другим портом (8000 и 8001) и PID 
 
 ### Проверка
 > systemctl status httpd@httpd1.service
