@@ -117,4 +117,5 @@ May 28 09:21:00 localhost.localdomain logmonitor.sh[12885]: config.vm.provision 
 
 ### Все
 > exit
+
 > vagrant destroy -f
