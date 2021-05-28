@@ -1,7 +1,0 @@
-[Unit]
-Description=Key word monitor script
-
-[Service]
-Type=oneshot
-EnvironmentFile=/etc/sysconfig/monitor
-ExecStart=/usr/bin/monitor.sh
