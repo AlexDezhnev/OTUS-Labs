@@ -1,0 +1,13 @@
+[Unit]
+Description=Spawn fast cgi service
+After=network.target
+Documentation=man:spawn-fcgi(1)
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/spawn-fcgi $OPTIONS
+ExecReload=/usr/bin/spawn-fcgi $OPTIONS
+EnvironmentFile=/etc/sysconfig/spawn-fcgi
+
+[Install]
+WantedBy=multi-user.target

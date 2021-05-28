@@ -1,0 +1,9 @@
+[Unit]
+Description=Start logmonitor service every 30 seconds
+
+[Timer]
+OnCalendar=*-*-* *:*:00/30
+Unit=logmonitor.service
+
+[Install]
+WantedBy=multi-user.target
