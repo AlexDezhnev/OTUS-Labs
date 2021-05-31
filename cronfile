@@ -1,0 +1,2 @@
+0 * * * * cd /home/vagrant && /bin/bash /home/vagrant/make_report.sh /home/vagrant/access.log
+0-59 * * * * cd /home/vagrant && /bin/bash /home/vagrant/increment_line.sh
