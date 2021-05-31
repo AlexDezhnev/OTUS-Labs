@@ -2,7 +2,7 @@
 
 ### Задание
 
-'''
+```
 Практические навыки работы с ZFS
 Цель:
 - Отрабатываем навыки работы с созданием томов export/import и установкой параметров.
@@ -48,10 +48,10 @@
 Результат:
 список шагов которыми восстанавливали
 зашифрованное сообщение
-'''
+```
 
 ### Решение 
-'''
+```
 [root@server ~]# lsblk
 NAME   MAJ:MIN RM SIZE RO TYPE MOUNTPOINT
 sda      8:0    0  10G  0 disk
@@ -200,13 +200,13 @@ zle/rfc1035                                        100%[========================
 65	/hybrid/compress/lz4
 95	/hybrid/compress/lzjb
 359	/hybrid/compress/
-'''
+```
 
 #######################################################
 ## НАИБОЛЕЕ ЭФФЕКТИВЕН gzip, САМЫЙ НЕЭФФЕКТИВНЫЙ zle ##
 #######################################################
 
-
+```
 [root@server ~]# ls -la
 total 1024060
 dr-xr-x---.  3 root root        211 Mar 30 20:19 .
@@ -342,12 +342,14 @@ config:
 	    /root/zpoolexport/fileb  ONLINE       0     0     0
 
 errors: No known data errors
+```
+
 
 #######################################
 ## Найти сообщение от преподавателей ##
 #######################################
 
-
+```
 [root@server ~]# zfs receive hybrid/text < otus_task2.file
 [root@server ~]# zfs list
 NAME                   USED  AVAIL     REFER  MOUNTPOINT
@@ -363,3 +365,4 @@ otus/hometask2        1.88M   350M     1.88M  /otus/hometask2
 
 [root@server text]# cat task1/file_mess/secret_message
 https://github.com/sindresorhus/awesome
+```
