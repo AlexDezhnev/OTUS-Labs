@@ -6,17 +6,17 @@
 sleep 2
 
 # Получаем PID запущенных скриптов
-loop1=$(top -b -n1 | grep "loop.sh" | awk 'NR==1 {print $1}')
-loop2=$(top -b -n1 | grep "loop.sh" | awk 'NR==2 {print $1}')
-echo -e "\nЦикл 1: PID=$loop1"
-echo -e "Цикл 2: PID=$loop2"
+loop1=$(ps | grep "loop.sh" | sort -n | awk 'NR==1 {print $1}')
+loop2=$(ps | grep "loop.sh" | sort -n | awk 'NR==2 {print $1}')
+echo -e "\nloop 1: PID=$loop1"
+echo -e "loop 2: PID=$loop2"
 
 # Вешаем на 1 процессор оба скрипта
 taskset -cp 0 $loop1 >/dev/null
 taskset -cp 0 $loop2 >/dev/null
 
 # Понижаем приоритет скрипту 1
-echo -e "\nChanging process priority!"
+echo -e "\nChanging process priority for loop1 (PID $loop1)!"
 renice 5 -p $loop1
 
 # Ждем 5 секунд, чтобы устаканить нагрузку
@@ -30,5 +30,5 @@ time1=$(top -b -n1 | grep "loop.sh"| awk 'NR==1 {print $11}')
 time2=$(top -b -n1 | grep "loop.sh"| awk 'NR==1 {print $11}')
 
 # Вывод в консоль
-echo -e "\nЦикл 1: PID=$loop1, загрузка ядра $cpu1, время работы $time1"
-echo "Цикл 2: PID=$loop2, загрузка ядра $cpu2, время работы $time2"
+echo -e "\nloop 1: PID=$loop1, cpu load $cpu1, uptime $time1"
+echo "loop 2: PID=$loop2, cpu load $cpu2, uptime $time2"

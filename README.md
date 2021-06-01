@@ -35,18 +35,15 @@
 >vagrant up
 
 ```
-default:
-    default: Complete!
+ default:
+    default: loop 1: PID=2268
+    default: loop 2: PID=2269
     default:
-    default: Цикл 1: PID=12554
-    default: Цикл 2: PID=12554
-    default:
-    default: Changing process priority!
-    default: 12554 (process ID) old priority 0, new priority 5
+    default: Changing process priority for loop1 (PID 2268)!
+    default: 2268 (process ID) old priority 0, new priority 5
     default:
     default: Please wait 5 sec
     default:
-    default: Цикл 1: PID=12554, загрузка ядра 76.5, время работы 0:05.51
-    default: Цикл 2: PID=12554, загрузка ядра 25.0, время работы 0:05.66
-Alexeys-iMac:OTUS-Labs alexeydezhnev$
+    default: loop 1: PID=2268, cpu load 68.8, uptime 0:05.37
+    default: loop 2: PID=2269, cpu load 31.2, uptime 0:05.52
 ```

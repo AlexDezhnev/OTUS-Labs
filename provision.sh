@@ -5,7 +5,7 @@ echo "export LC_ALL=en_US.utf-8" >> /etc/profile.d/locale.sh
 echo "export LANG=en_US.utf-8" >> /etc/profile.d/locale.sh
 
 # Update packages
-yum -y update
+# yum -y update
 
 # set permissive mode
 setenforce 0
