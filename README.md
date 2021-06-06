@@ -134,7 +134,7 @@ Jun 05 17:20:51 hw11 systemd[1]: Started The nginx HTTP and reverse proxy server
 ```
 
 ## ЗАДАНИЕ 2
-
+- Развертываем стенд https://github.com/mbfx/otus-linux-adm/tree/master/selinux_dns_problems
 Как говорил мудрый рядовой Иванов, чистка автомата начинается с проверки серийного номера, чтобы не почистить чужой автомат. По условию, инженер предполагает, что проблема в SELinux. Ок, на сервере и клиенте переводим SELinux в режим permissive
 >setenforce 0
 
