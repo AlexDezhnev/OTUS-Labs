@@ -1,0 +1,19 @@
+---
+- name: install required packages
+  become: true
+  yum:
+    name: "{{ packages }}"
+    state: present
+- name: Install NGINX package from epel-repo
+  become: true
+  yum:
+    name: nginx
+    state: latest
+  notify:
+    - restart nginx
+- name: copy nginx config file
+  become: true
+  template:
+    src: templates/nginx.conf.j2
+    dest: /etc/nginx/nginx.conf
+  notify: restart nginx

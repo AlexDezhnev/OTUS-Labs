@@ -1,0 +1,10 @@
+---
+http_port: 7080
+packages:
+    - epel-release
+    - bind
+    - bind-utils
+    - ntp
+    - policycoreutils-python
+    - setools
+    - setroubleshoot-server
