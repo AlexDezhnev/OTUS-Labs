@@ -1,0 +1,9 @@
+---
+- name: install Docker
+  become: true
+  yum:
+    name: "{{ packages }}"
+    state: present
+  notify:
+    - restart docker
+...
