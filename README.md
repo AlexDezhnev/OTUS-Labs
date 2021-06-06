@@ -216,5 +216,7 @@ changing security context of ‘/etc/named’
 ##### В отчете инженеру даем рекомендацию изменить контекст для папки /etc/named и установить разрешение 660 на файл /etc/named/dynamic/named.ddns.lab.view1.jnl:
 
 >semanage fcontext -a -t named_zone_t "/etc/named(/.*)?"
+
 >restorecon -v -r '/etc/named'
+
 >chmod 660 /etc/named/dynamic/named.ddns.lab.view1.jnl
