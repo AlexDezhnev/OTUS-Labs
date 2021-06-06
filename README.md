@@ -14,6 +14,8 @@
 #### Кастомный образ nginx на базе alpine
 Образ собран с помощью [Dockerfile](docker/Dockerfile) и загружен в [DockerHub](https://hub.docker.com/r/adezhnev/otus-labs)
 
+Стенд содержит Docker, устанавливаемый при запуске Vagrant с помощью Ansible
+
 ###### Проверка:
 
 >vagrant up
