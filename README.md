@@ -97,6 +97,7 @@ drwxr-xr-x.  2 root root        6 Jun  9  2014 cron.weekly
 - удаляем папку /etc
 >rm -rf /etc
 rm: cannot remove ‘/etc’: Device or resource busy
+
 >ls -la /etc
 ```
 total 0
