@@ -60,6 +60,7 @@ Borg prune хранит:
 >mkdir etc
 - восстанавливаем архив с сервера в локальную папку /root/etc
 >sudo BORG_PASSPHRASE=Borg_123456789 borg extract borg@server:client_repo::2021-06-14_11:00:02 etc/
+
 >ls -la etc/
 ```
 total 1072
