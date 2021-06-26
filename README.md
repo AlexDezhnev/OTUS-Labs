@@ -29,9 +29,9 @@
 Last login: Sat Jun 26 05:39:48 2021 from 10.0.2.2
 -bash: warning: setlocale: LC_CTYPE: cannot change locale (ru_RU.UTF-8)
 ```
-- принудительно впесем в журнал запись со статусом **crit**
+- принудительно внесем в журнал запись со статусом **crit**
 >[vagrant@web ~]$ logger -p crit this is critical error
-
+- проверим журнал
 >[vagrant@web ~]$ sudo grep web /var/log/messages | grep crit
 ```
 Jun 26 05:40:20 web vagrant: this is critical error
