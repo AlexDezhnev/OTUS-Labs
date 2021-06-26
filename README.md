@@ -108,7 +108,7 @@ Jun 26 05:39:48 web systemd: Started The nginx HTTP and reverse proxy server.
 
 ![](Images/nginx_edit.jpg)
 
-- проверка журнала айдита на веб-сервере
+- проверка журнала аудита на веб-сервере
 
 >[vagrant@web ~]$ sudo ausearch -k nginx_conf
 ```
@@ -117,7 +117,7 @@ Jun 26 05:39:48 web systemd: Started The nginx HTTP and reverse proxy server.
 ```
 Пусто
 
-- проверка журнала айдита на ло-сервере
+- проверка журнала аудита на ло-сервере
 
 > vagrant ssh log
 > [vagrant@log ~]$ sudo  ausearch -k nginx_conf
