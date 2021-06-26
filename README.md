@@ -96,7 +96,7 @@ Jun 26 05:39:48 web nginx: nginx: configuration file /etc/nginx/nginx.conf test 
 Jun 26 05:39:48 web systemd: Started The nginx HTTP and reverse proxy server.
 [vagrant@web ~]$
 ```
-##### как видно, логи nginx на веб-сервере содержат только информацию о развертывании и запуске сервиса
+##### Как видно, логи nginx на веб-сервере содержат только информацию о развертывании и запуске сервиса. Некритические логи локально не собираются.
 
 3. Аудит
 
