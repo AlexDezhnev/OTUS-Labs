@@ -46,9 +46,8 @@ Connection to 127.0.0.1 closed.
 Last login: Sat Jun 26 05:38:13 2021 from 10.0.2.2
 -bash: warning: setlocale: LC_CTYPE: cannot change locale (ru_RU.UTF-8)
 ```
->[vagrant@log ~]$ sudo grep web /var/log/messages
+>[vagrant@log ~]$ sudo grep web /var/log/messages | grep crit
 ```
-Jun 26 05:38:10 localhost ansible-lineinfile: Invoked with group=None insertbefore=None unsafe_writes=False selevel=None create=False seuser=None state=present owner=None backrefs=False search_string=None serole=None firstmatch=False mode=None path=/etc/hosts insertafter=None regexp=None line=192.168.100.10 web attributes=None backup=False validate=None setype=None
 Jun 26 05:40:20 web vagrant: this is critical error
 [vagrant@log ~]$
 ```
