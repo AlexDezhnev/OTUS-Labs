@@ -1,0 +1,14 @@
+---
+- hosts: all
+  become: yes
+
+  tasks:
+  - name: Put SELinux in permissive mode
+    selinux:
+      policy: targeted
+      state: permissive
+
+  - name: Install base packages
+    yum:
+      name: net-tools
+      state: latest

@@ -1,0 +1,11 @@
+---
+- name: Put SELinux in permissive mode
+  selinux:
+    policy: targeted
+    state: permissive
+
+- name: Install base packages
+  become: yes
+  yum:
+    name: "{{router_packages}}"
+    state: latest
